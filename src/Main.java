@@ -12,8 +12,8 @@ public class Main {
 
         // Задача 2
         int[] payment = {30_500, 46_900, 27_900, 48_380, 51_300};
-        int maxPayment = -1;
-        int minPayment = 100_000;
+        int maxPayment = Integer.MIN_VALUE;
+        int minPayment = Integer.MAX_VALUE;
         for (int i = 0; i < payment.length; i++) {
             if (payment[i] > maxPayment) {
                 maxPayment = payment[i];
@@ -28,7 +28,7 @@ public class Main {
         int[] salary = {30_500, 46_900, 27_900, 48_380, 51_300};
         double averageSalary = 0;
         for (int j : salary) {
-            averageSalary = (double) j / 5;
+            averageSalary = (double) j / salary.length;
         }
         System.out.println("Средняя сумма трат за месяц составила " + averageSalary + " рублей.");
 
